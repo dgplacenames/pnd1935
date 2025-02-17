@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap');*/
 
 body {
   display: flex;
@@ -72,7 +72,7 @@ p.no_indent {
 .hw {
   font-variant: small-caps;
   font-size: 14pt;
-  font-weight: bold;
+  //font-weight: bold;
 }
 
 em {
@@ -94,6 +94,7 @@ span.pb>a {
   padding-right: 2em;
   font-style: normal;
   font-weight: normal;
+  color: #0000EE;
 }
 
 span.pb>a::before {
@@ -102,6 +103,10 @@ span.pb>a::before {
 
 span.pb>a:hover {
   text-decoration: underline;
+}
+
+span.pb>a:visited {
+  color: #551A8B;
 }
 
 .sidenav {
@@ -114,6 +119,7 @@ span.pb>a:hover {
   overflow-x: hidden;
   padding: 0px 0;
 }
+
 
 .sidenav a {
   padding: 6px 8px 6px 8px;
