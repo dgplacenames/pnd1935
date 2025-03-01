@@ -197,6 +197,8 @@ span.pb > a:visited {
 }
 
 
+/*Nav*/
+
 .nav {
   width: fit-content;
   position: fixed;
@@ -205,8 +207,6 @@ span.pb > a:visited {
   left: 10px;
   padding: 0px 0;
   background-color: #333;
- 
-
 }
 
 .nav li {
@@ -220,7 +220,7 @@ span.pb > a:visited {
 }
 
 .nav li:hover {
-  background-color: #f36f25;
+  /*background-color: #f36f25;*/
   color: #f2f2f2;
   text-decoration: underline;
 }
@@ -229,7 +229,6 @@ span.pb > a:visited {
   font-size: 14px;
   color: #f2f2f2;
   text-decoration: none;
-  padding: 5px 0;
   display: block;
 }
 
@@ -257,14 +256,14 @@ nav ul li:hover ul {
 }
 
 nav ul li:hover ul li {
-  background-color: #555555;
+  background-color: #22a13e;
   width: 125px;
   height: 30px;
   display: inline-block;
 }
 
 nav ul li ul li:hover {
-  background-color: #333333;
+  background-color: #6b1c1c;
 }
 
 nav ul li ul li a {
@@ -281,11 +280,21 @@ nav ul li ul li a:hover {
   padding: 0;
 }
 
-.nav li:hover ul {
+
+.nav .Parish:hover ul {
   display: block;
   position: absolute;
-  top: 0;
   left: 100%;
+  /*Brings the dropdown menus up to level.*/
+  top:-17px;
+}
+
+.nav .G-L:hover ul {
+  display: block;
+  position: absolute;
+  left: 100%;
+  /*Brings the dropdown menu up to level.*/
+  top:-18px;
 }
 
 .sub-menu li {
@@ -294,7 +303,6 @@ nav ul li ul li a:hover {
   display: block;
   z-index: 1;
 }
-  
 
 
 @media screen and (max-width: 1000px) {
@@ -304,10 +312,9 @@ nav ul li ul li a:hover {
       
   }
 
-
   .nav {
       width: 100%;
-      height: auto;
+      height: fit-content;
       position: fixed;
       top: 0;
       left: 0;
@@ -325,11 +332,12 @@ nav ul li ul li a:hover {
       padding: 6px 8px 6px 8px;
   }
 
-  .nav li:hover ul {
+  .nav .Parish:hover ul, .nav .G-L:hover ul {
       display: block;
       position: absolute;
-      top: 0;
-      left: 100%;
+      top: 22px;
+      left: 0;
+      width: 150px;
   }
 
   .sub-menu li {
