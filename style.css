@@ -11,7 +11,7 @@ body {
 
 main {
   flex: 2;
-  margin-top: 3rem;
+  
   margin-right: 2rem;
   margin-left: 3rem;
   padding-bottom: 2rem;
@@ -196,48 +196,156 @@ span.pb > a:visited {
   color: #551a8b;
 }
 
+
 .nav {
-  width: 130px;
+  width: fit-content;
   position: fixed;
   z-index: 1;
   top: 10px;
   left: 10px;
-  background: #333;
-  overflow-x: hidden;
   padding: 0px 0;
+  background-color: #333;
+ 
+
 }
 
-.nav a {
-  padding: 6px 8px 6px 8px;
-  text-decoration: none;
-  font-size: 14px;
+.nav li {
+  margin: 0;
+  background-color: #333;
+  border: none;
+  text-align: left;
+  display: flex;
+  position: relative;
+  padding: 2px 8px 2px 8px;
+}
+
+.nav li:hover {
+  background-color: #f36f25;
   color: #f2f2f2;
-  display: block;
-}
-
-.nav a:hover {
   text-decoration: underline;
 }
 
+.nav li a {
+  font-size: 14px;
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 5px 0;
+  display: block;
+}
+
+.nav li.current {
+  background-color: #F36F25;
+  border-width: 10px;
+
+}
+
+.nav li.current a {
+  color: #FFFFFF;
+}
+
+nav ul li ul {
+  display: none;
+  list-style-type: none;
+  width: 125px;
+  padding: 0px;
+  margin-top: 3px;
+  margin-left: -5px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li:hover ul li {
+  background-color: #555555;
+  width: 125px;
+  height: 30px;
+  display: inline-block;
+}
+
+nav ul li ul li:hover {
+  background-color: #333333;
+}
+
+nav ul li ul li a {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+nav ul li ul li a:hover {
+  text-decoration: none;
+}
+
+.nav li ul {
+  display: none;
+  padding: 0;
+}
+
+.nav li:hover ul {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+.sub-menu li {
+  width: auto;
+  white-space: nowrap;
+  display: block;
+  z-index: 1;
+}
+  
+
+
 @media screen and (max-width: 1000px) {
+
+  main {
+   top: 3rem;
+      
+  }
+
+
   .nav {
-    width: 100%;
-    height: auto;
-    position: fixed;
-    overflow: hidden;
-    top: 0%;
-    left: 0%;
-    text-align: center;
+      width: 100%;
+      height: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      text-align: center;
+    
   }
-  .nav a {
-    display: inline-block;
-    text-align: center;
+
+  .nav li {
+      margin: 0;
+      background-color: #333;
+      border: none;
+      text-align: left;
+      display: inline-block;
+      position: relative;
+      padding: 6px 8px 6px 8px;
   }
+
+  .nav li:hover ul {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 100%;
+  }
+
+  .sub-menu li {
+      width: auto;
+      white-space: nowrap;
+      display: block;
+      z-index: 1;
+      padding-top:0;
+      padding-bottom: 0;
+  }
+
 }
 
 @media screen and (max-width: 500px) {
   .nav a {
-    text-align: center;
-    float: none;
+      text-align: center;
+      float: none;
   }
 }
